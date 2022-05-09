@@ -5,6 +5,7 @@ class User < ApplicationRecord
   after_update_commit { broadcast_update }
   has_many :messages
   enum status: %i[offline away online]
+  has_many :notifications, dependent: :destroy, as: :recipient
 
   def broadcast_update
     broadcast_replace_to 'user_status', partial: 'users/status', user: self
