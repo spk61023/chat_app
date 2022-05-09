@@ -13,7 +13,7 @@ class RoomsController < ApplicationController
   def show
     @single_room = Room.find(params[:id])
     puts @single_room.id
-    #current_user.update(room_id: @single_room.id)
+    # current_user.update_attribute(:room_id, @single_room.id)
 
     @rooms = Room.public_rooms
     @users = User.all_except(current_user)
