@@ -8,14 +8,14 @@
                 <%= render @users %>
             </ul>
         </div>
-        <h4> Rooms </h4>
+        <!--<h4> Rooms </h4>
         <%= render partial: "layouts/new_room_form" %>
         <%= turbo_stream_from "rooms" %>
         <div id="rooms">
             <ul class="list-group">
                 <%= render @rooms %>
             </ul>
-        </div>
+        </div>-->
     </div>
     <div id="room_container" class="col-md-8 col-sm-8 bg-dark text-light">
         <% if @single_room %>

@@ -5,4 +5,5 @@
 <% end %>
 <li class="list-group-item d-flex align-items-center user_list_item <%= isActive %>">
     <%= link_to user.email, user, class:'mr-auto username' %>
+    <%= turbo_stream_from "user_status" %>
 </li>
